@@ -9,11 +9,14 @@ html {
 }
 
 .page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
   color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
+  font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   background-color: #1b1919;
 }
@@ -35,4 +38,333 @@ fieldset {
 ul,
 ol {
   list-style: none;
+}
+
+.content {
+  display: flex;
+  gap: 20px;
+}
+
+.result {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.result__video-container {
+  width: 711px;
+  height: 386px;
+  position: relative;
+}
+
+.result__video {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.search-form__fieldset-title {
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search-form__fieldset {
+  border: none;
+}
+
+.search-form__label {
+  width: fit-content;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.search-form__checkbox-list {
+  display: flex;
+  gap: 14px;
+}
+
+.search-form__submit-button {
+  height: 34px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 194px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.search-form__submit-button:hover {
+  text-decoration: underline;
+}
+
+.content__details {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.content__list {
+  overflow: auto;
+  width: 399px;
+  height: 298px;
+}
+
+.content__list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.content__list-item {
+  min-height: 103px;
+}
+
+.title {
+  color: #fff;
+  font-family: Oswald;
+  font-size: 75px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__card-link {
+  text-decoration: none;
+  display: block;
+  color: #ffffff;
+  font-family: Oswald;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+  overflow-wrap: break-word;
+}
+
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  padding-top: 1px;
+  padding-bottom: 1px;
+  object-fit: cover;
+  flex-shrink: 0;
+  flex-basis: 100px;
+}
+
+.content__video-card-description {
+  color: #fff;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.content__video-card-description-container {
+  flex-grow: 1;
+  max-width: 50%;
+}
+
+.content__video-card-description {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.search-form__textfield {
+  appearance: none;
+  outline: none;
+  background-color: transparent;
+  padding-left: 0;
+  border: 1px solid transparent;
+  border-color: #fff transparent;
+  width: 225px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.search-form__pseudo-checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid #fff;
+  position: relative;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+}
+
+input[type="checkbox"]:disabled + span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  vertical-align: middle;
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+
+.search-form__submit-button {
+  height: 34px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  width: 194px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.button:focus-visible {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+.button:active {
+  background: #545050;
+}
+
+.more-button {
+  cursor: pointer;
+  display: flex;
+  width: 100%;
+  height: 34px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border: 1px solid #fff;
+  background-color: transparent;
+  color: #fff;
+  text-align: center;
+  font-family: Fira Sans Condensed;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  box-sizing: border-box;
+  padding: 10px 15px;
+}
+
+.more-button:focus-visible {
+  outline: none;
+}
+
+.content__accent {
+  color: #545050;
+}
+
+/* .search-form__checkbox-list .search-form__label:hover {
+  text-decoration: underline;
+}
+
+.content__video-card:hover {
+  text-decoration: underline;
+}
+
+.search-form__submit-button:hover {
+  text-decoration: underline;
+} */
+
+.search-form__checkbox-list .search-form__label:hover,
+.content__video-card:hover,
+.search-form__submit-button:hover,
+.more-button:hover {
+  text-decoration: underline;
+}
+
+.content__list-item:active {
+  background-color: #545050;
+}
+
+.content__card-link:focus-visible {
+  outline: none;
+  border: 1px solid #fff;
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+input:active {
+  border: 1px solid #fff;
+}
+
+label:has(> input:focus-visible) {
+  border: 1px solid #fff;
+  padding: 1px;
+}
+
+label:has(> input:active) {
+  border: none;
+}
+
+label {
+  border: 1px solid transparent;
 }
