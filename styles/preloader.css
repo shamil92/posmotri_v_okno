@@ -9,6 +9,10 @@
   background: #545050;
 }
 
+.preloader-template {
+  position: absolute;
+}
+
 .preloader-chasing-squares {
   width: 50px;
   height: 50px;
