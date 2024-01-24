@@ -48,21 +48,18 @@ ol {
 .result {
   display: flex;
   justify-content: flex-end;
-  gap: 22px;
+  gap: 14px;
   flex-direction: column;
 }
 
 .result__video-container {
-  width: 711px;
-  height: 386px;
   position: relative;
 }
 
 .result__video {
-  position: absolute;
   object-fit: cover;
-  height: 100%;
-  width: 100%;
+  width: 711px;
+  height: 386px;
 }
 
 .search-form {
@@ -115,6 +112,7 @@ ol {
 }
 
 .content__list {
+  position: relative;
   overflow: auto;
   padding: 2px;
   width: 399px;
@@ -150,6 +148,9 @@ ol {
   font-family: "Oswald", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
+}
+
+.content__video-card-title {
   text-transform: uppercase;
 }
 
@@ -225,8 +226,10 @@ ol {
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
   position: absolute;
-  width: 15px;
-  height: 15px;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
   background-color: #fff;
 }
 
